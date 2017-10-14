@@ -164,6 +164,92 @@
 				</tbody>
 			</table>		
 
+			<form>				
+				<p><strong>Dodaj komentarz</strong></p>
+
+					<p><label>Użytkownik<sup>*</sup>
+						<input type="text" name="username" size="25" maxlength="25">
+					</label></p>
+
+					<p><label>E-mail<sup>*</sup>
+						<input type="email" name="email" size="30" maxlength="50">
+					</label></p>				
+
+					<p>
+						<label>Płeć<sup>*</sup></label>
+
+						<label>
+							<input type="radio" name="gender" value="mezczyzna">
+							Mężczyzna
+						</label>
+
+						<label>
+							<input type="radio" name="gender" value="kobieta">
+							Kobieta
+						</label>
+					</p>
+
+					<p>
+						<label>Oceń przepis<sup>*</sup>
+							
+							<select name="rating">							
+								<optgroup label="Wyśmienity">
+									<option selected>10</option>
+									<option>9</option>
+								</optgroup>
+
+								<optgroup label="Całkiem dobry">
+									<option>8</option>
+									<option>7</option>
+								</optgroup>
+
+								<optgroup label="Może być">
+									<option>6</option>
+									<option>5</option>
+								</optgroup>
+
+								<optgroup label="Słabiutko">
+									<option>4</option>
+									<option>3</option>
+								</optgroup>
+
+								<optgroup label="Okropny">
+									<option>2</option>
+									<option>1</option>
+								</optgroup>
+							
+							</select>
+
+						</label>
+					</p>				
+
+					<p><label>Tytuł<sup>*</sup>
+						<input type="text" name="title" size="60" maxlength="50">
+					</label></p>		
+
+					<p><label>Treść<sup>*</sup>
+						<textarea name="comments" rows="4" cols="50" maxlength="200"></textarea>
+					</label></p>	
+
+					<p><label>
+						<input type="checkbox" name="subscribtion" value="subscribtion">
+						Chcę otrzymywać informacje o nowych przepisach, które pojawią się na stronie.
+					</label></p>	
+
+					<p><label>
+						<input type="checkbox" name="questions" value="questions">
+						Zgadzam się na otrzymywanie poprzez Serwis pytań od innych użytkowników dotyczących mojej opinii,
+						w tym na przesyłanie przez Serwis powiadomień o takich pytaniach.
+					</label></p>	
+
+					<p>* - Pola obowiązkowe</p>
+
+					<p>
+						<input type="submit" value="Wyślij">
+						<input type="reset" value="Wyczyść">
+					</p>					
+			</form>
+
 	<hr>
 	&copy; H&amp;G 
 	</body>
