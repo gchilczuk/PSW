@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset = "utf-8">
+		<title>Rejestracja</title>
+		
+	</head>
+
+	<body>
+		<h1>Rejestracja</h1> 
+
+		<a href="home_page.html">Start</a>
+		<a href="recipes.html">Przepisy</a>
+		<a href="converter.html">Przelicznik</a>
+		<a href="">O nas</a>
+		<a href="contact.html">Kontakt</a>
+		<a href="register.html">Rejestracja</a>
+
+
+	<p>
+		<form autocomplete="on">
+			<p>
+				<label> Imię
+					<input type="text" name="first_name" size="30" maxlength="30" autofocus />
+				</label> (pierwsze imię, np: Antoni)
+			</p>
+			<p>
+				<label> Nazwisko
+					<input type="text" name="second_name" size="30" maxlength="50" required>
+				</label> (pełne nazwisko, np: Kowalski-Nowak)
+			</p>
+			
+			<p>
+				Podaj datę urodzenia <br>
+					<input type="number" name="bday"  placeholder="dzień" min="1" max="32">
+					<input type="text" name="bmonth" placeholder="miesiąc" list="months" />
+					<input type="number" name="byear" placeholder="rok" min="1900" max="2050">
+					<datalist id="months">
+						<option value="styczeń">
+						<option value="luty">
+						<option value="marzec">
+						<option value="kwiecień">
+						<option value="maj">
+						<option value="czerwiec">
+						<option value="lipiec">
+						<option value="sierpień">
+						<option value="wrzesień">
+						<option value="październik">
+						<option value="listopad">
+						<option value="grudzień">
+					</datalist>
+
+			</p>
+			<p>
+				<label>E-mail<sup>*</sup>
+					<input type="email" name="email" size="30" maxlength="255" required>
+				</label> (np.: nazwa@domena.pl)
+			</p>
+			<p>
+				<label>Numer telefonu
+					<input type="tel" name="tel" pattern = "\d{9}">
+				</label>
+			</p>
+			<p>
+				<input type="submit" value="Wyślij">
+			</p>
+
+		</form>
+		
+		<hr>
+		&copy; H&amp;G 
+	</body>
+
+
+
+</html>
