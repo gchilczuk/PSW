@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-
 	<head>
 		<meta charset = "utf-8">
 		<title>Przepisy</title>
@@ -10,26 +9,39 @@
 	</head>
 
 	<body>
-		<h1>Serwis kulinarny</h1> 
+		<header>
+			<h1>Serwis kulinarny</h1> 
+		</header>
+		
+		<nav>
+			<a href="home_page.html">Start</a>
+			<a href="recipes.html">Przepisy</a>
+			<a href="converter.html">Przelicznik</a>
+			<a href="">O nas</a>
+			<a href="contact.html">Kontakt</a>
+			<a href="register.html">Rejestracja</a>		
+		</nav>
 
-		<a href="home_page.html">Start</a>
-		<a href="recipes.html">Przepisy</a>
-		<a href="converter.html">Przelicznik</a>
-		<a href="">O nas</a>
-		<a href="contact.html">Kontakt</a>
-		<a href="register.html">Rejestracja</a>
-
-		<br>
 		<form action="add_recipe.html">
 			<input type="submit" name="add_button" value="Zaproponuj swój przepis!">
-		</form>
-		<h2>Przepisy</h2>
-		<img src="lasagne.jpg" width = "65" height = "50" alt = "Lasagne - propozycja podania"><a href="recipe1.html">Lasagne bolognese</a> 
+		</form>				
 
-		<p><a href="ftp://sunsite.icm.edu.pl/pub/music/demos/music/compos/chill11/ch11_rul.txt" download>ftp example</a>
+		<section id="1">
+			<h2>Przepisy</h2>
+			<figure>
+				<img src="lasagne.jpg" width = "65" height = "50" 
+					alt = "Lasagne - propozycja podania">
+				<figcaption>
+					<a href="recipe1.html">Lasagne bolognese</a> 
+				</figcaption>
+			</figure>			
 
-		<hr>
-		&copy; H&amp;G 
+			<p><a href="ftp://sunsite.icm.edu.pl/pub/music/demos/music/compos/chill11/ch11_rul.txt" download>ftp example</a>
+		</section>
+		
+		<footer>
+			<hr>
+			&copy; H&amp;G 
+		</footer>
 	</body>
-
 </html>
