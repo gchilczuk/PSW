@@ -7,6 +7,20 @@
 		<meta name = "keywords" content = "kitchen, cooking, recipe, lasagne, kuchnia, gotowanie, przepis">
 		<meta name = "description" content = "You can find there the best recipe for lasagne bolognese. 
 			Znajdziesz tutaj najlepszy przepis na lasagne bolognese.">
+
+		<!-- css1: Z2 - Embedded Style Sheets -->
+		<style type="text/css">
+			strong	{
+				font-weight: bolder;
+				font-size: 16pt;
+			}
+			.myclass {
+				font-family: ubuntu, helvetica, sans-serif;
+			}
+		</style>
+
+		<!-- css1: Z2 - linked exterbnal style sheet -->
+		<link rel="stylesheet" type="text/css" href="css/font-sizes.css">
 	</head>
 
 	<body>
@@ -26,29 +40,30 @@
 		</nav>		
 
 		<section id="1">
-			<h2>Lasagne Bolognese</h2>
+			<h2 class="fs-rel-pe">Lasagne Bolognese</h2>
 
 			<figure>
 				<img src="lasagne.jpg" alt="Propozycja podania Lasagne Bolognese">
-				<figcaption>
+				<figcaption class="fs-rel-em">
 					<a href="https://pl.wikipedia.org/wiki/Lasagne#/media/File:Lasagna_with_salad,_May_2011.jpg" download>pobierz zdjęcie</a>
 				</figcaption>
 			</figure>
 
-			<aside>
+			<!-- css1: Z2 - inline styles -->
+			<aside style="font-size: 8pt; color: teal;">
 				Lasagne to najpopularniejsze danie włoskie, które zyskało ogromną popularność na całym świecie, głównie w Stanach Zjednoczonych.
 				Historia lasagne sięga jeszcze czasów starożytnych. Prawdopodobnie to Rzymianie są autorami tej potrawy. 
 				Co ciekawe, samo słowo lasagne pochodzi z języka greckiego i oznacza naczynie, w którym danie było początkowo przygotowywane.
 			</aside>
 
-			<article>
+			<article class="myclass">
 				<h3>Przepis</h3>
 
 				<section id="ingredients">
 				<h4>Składniki</h4>				
 								
 					<details>
-						<summary><strong>Sos bolognese</strong></summary>
+						<summary><strong class="fs-abs-cm">Sos bolognese</strong></summary>
 						<ul>
 							<li>2 cebule</li>
 							<li>czosnek</li>
@@ -71,7 +86,7 @@
 					</details>
 
 					<details>
-						<summary><strong>Sos beszamelowy</strong></summary>
+						<summary><strong class="fs-abs-pt">Sos beszamelowy</strong></summary>
 						<ul>
 							<li>50 g masła </li>
 							<li>3 łyżki mąki </li>
@@ -138,7 +153,7 @@
 				</section>			
 			</article>			
 
-			<p><a href="Lasagne.txt" download>pobierz przepis</a>
+			<p class="fs-rel-ex"><a href="Lasagne.txt" download>pobierz przepis</a>
 		</section>
 
 		<section id="2">
