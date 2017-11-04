@@ -1,0 +1,35 @@
+/* css1: Z3 - font sizes*/
+.fs-rel-em { font-size: 1.8em; }
+
+.fs-rel-ex { font-size: 1.8ex; }
+
+.fs-rel-pe { font-size: 180%; }
+
+.fs-abs-cm { font-size: 1cm; }
+
+.fs-abs-pt { font-size: 22pt; }
+
+/* css1: Z7 - text format*/
+.tf-small { font-weight: lighter;
+			font-style: normal;
+			font-variant: normal;
+			font-size: small;
+			line-height: 250%;
+			font-family: verdana, times, sans-serif }
+
+.tf-title { font-weight: bolder;
+			font-style: normal;
+			font-variant: small-caps;
+			font-size: 500%;
+			line-height: 200%;
+			font-family: cursive, courier, sans-serif;
+			color: Crimson;
+			text-align: center; }
+
+.tf-subtitle { font-weight: bold;
+			   font-style: italic;
+			   font-variant: normal;
+			   font-size: 100%;
+			   line-height: 150%;
+			   font-family: times, courier, sans-serif;
+			   color: black; }
