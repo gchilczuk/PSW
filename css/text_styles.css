@@ -33,3 +33,26 @@
 			   line-height: 150%;
 			   font-family: times, courier, sans-serif;
 			   color: black; }
+
+:link { color: Crimson;
+		padding-left: 10pt;
+		padding-right: 10pt;
+		font-weight: bold;
+		font-family: cursive, courier, sans-serif;		
+		text-decoration-line: none; }
+
+:visited {  color: #9933ff;
+			padding-left: 10pt;
+			padding-right: 10pt;
+			font-weight: bold;
+			font-family: cursive, courier, sans-serif;		
+			text-decoration-line: none; }
+
+nav :link { color: Crimson;
+			font-weight: bold;
+			font-family: cursive, courier, sans-serif;	
+			font-size: x-large;	
+			text-decoration-line: none; }		
+
+footer > span { color: #DDDDDD;
+				font-weight: bold; }

@@ -7,3 +7,12 @@ header {
     background-position: left;
     z-index: -1
 }
+
+nav { background-color: lightgrey;
+	  text-align: center;
+	  padding-bottom: 5pt;
+	  padding-top: 5pt; }
+
+footer > :not(span) { color: grey; }
+
+footer { background-color: grey; }
