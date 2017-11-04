@@ -56,3 +56,14 @@ nav :link { color: Crimson;
 
 footer > span { color: #DDDDDD;
 				font-weight: bold; }
+
+h2.subtitle { text-align: center; }
+
+article { clear: both; }				
+
+aside > p { position: relative;
+			top: 15eM;
+			right: 2ex;
+			text-align: justify;			
+		  }
+  			
