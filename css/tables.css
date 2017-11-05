@@ -1,5 +1,7 @@
 table, th, td {
-	border: 1px solid black;
+	border-width: 1px;
+	border-style: solid;
+	border-color: grey;
 	border-collapse: collapse;
 }
 
@@ -28,8 +30,22 @@ th, td {
 }
 
 .n3 {
-	border: 2px solid lime;
+	border-width: 3px;
+	border-style: groove;
+	border-color: lime;
 	width: 100%;
+}
+
+.n3 th {
+	border-width: 4px;
+	border-style: dotted;
+	border-color: darkgrey;
+}
+
+.n3 td {
+	border-width: 2px;
+	border-style: dashed;
+	border-color: darkcyan;
 }
 
 .n4 tr:hover{
