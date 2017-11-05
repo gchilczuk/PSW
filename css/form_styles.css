@@ -12,5 +12,5 @@ input:required { border-color: Crimson;
 
 textarea:focus { background-color: lightgrey; }
 
-form > p:last-of-type { background-color: lightgrey; };
+form > p:last-of-type { background-color: lightgrey; }
 

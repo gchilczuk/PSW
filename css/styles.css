@@ -2,9 +2,6 @@ nav a:active { background-color: #f8b9c6; }
 
 th:empty { background-color: lightgrey; }
 
-/*Narazie brak pomysłu */
-:first { }
-
 /*To bedzie dobre jak zrobimy ppkt 13 */
 :first-child {  }
 

@@ -9,6 +9,18 @@ header {
     z-index: -1;    
 }
 
+body {
+	background-image: url("../imgs/background-img4.jpg");
+	background-color: white;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	height: 90%;
+	width: 100%;
+	background-position: bottom;
+	z-index: -2;	
+}
+
 nav { background-color: lightgrey;
 	  position: static;
 	  text-align: center;
