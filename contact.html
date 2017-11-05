@@ -8,29 +8,99 @@
 			kuchnia, gotowanie, przepis, kontakt">
 		<meta name = "description" content = "Kontakt. Contact.">
 
-		<link rel="stylesheet" type="text/css" href="css/text_styles.css">
-		<link rel="stylesheet" type="text/css" href="css/styles.css">
-		<link rel="stylesheet" type="text/css" href="css/background.css">
-		<link rel="stylesheet" type="text/css" href="css/form_styles.css">
-		<link rel="stylesheet" type="text/css" href="css/table_styles.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/text_styles.css"> -->
 		<link rel="stylesheet" type="text/css" href="css/navigation.css">
 
 	</head>
 
 	<body>
-
 		<header>
-			<h1 class="tf-title">Serwis kulinarny</h1> 
+			<h1 class="tf-title">Serwis kulinarny</h1>
+			<h1 class="print-title">Serwis Kulinarny</h1> 
 		</header>
 
-		<nav>
-			<a href="home_page.html">Start</a>
-			<a href="recipes.html">Przepisy</a>
-			<a href="converter.html">Przelicznik</a>
-			<a href="">O nas</a>
-			<a href="contact.html">Kontakt</a>
-			<a href="register.html">Rejestracja</a>
+		<nav id="menu"> Menu
+			<ul class="first-level">
+			   <li>
+			   	Home
+			   	<ul class="second-level">
+			   		<li>
+			   			<a href="home_page.html">Strona główna</a>
+			   			<ul class="third-level">
+			   				<li><a href="home_page.html">Aktualności</a></li>
+			   			</ul>
+			   		</li>
+			   		<li>
+			   			<a href="recipes.html">Przepisy</a>
+			   			<ul class="third-level">
+			   				<li>Przepis miesiąca</li>
+			   				<li>Najpopularniejsze</li>
+			   				<li><a href="add_recipe.html">Prześlij przepis</a></li>
+			   			</ul>
+			   		</li>
+			   		<li>
+			   			Przydatne
+			   			<ul class="third-level">
+			   				<li><a href="converter.html">Przelicznik miar</a></li>
+			   				<li>Zamienniki</li>
+			   				<li>Porady</li>
+			   			</ul>
+			   		</li>
+			   	</ul>
+			   </li>
+			  <li>
+			   	Moje konto
+			   	<ul class="second-level">
+			   		<li>
+			   			<a href="register.html">Rejestracja</a>
+			   		</li>
+			   		<li>
+			   			Listy
+			   			<ul class="third-level">
+			   				<li>Ulubione przepisy</li>
+			   				<li>Moje przepisy</li>
+			   			</ul>
+			   		</li>
+			   		<li>
+			   			Ustawienia
+			   			<ul class="third-level">
+			   				<li>Powiadomienia</li>
+			   				<li>Prywatność</li>
+			   				<li>Profil</li>
+			   			</ul>
+			   		</li>
+			   	</ul>
+			   </li>
+			   	<li>
+			   	Twórcy
+			   	<ul class="second-level">
+			   		<li>
+			   			O nas
+			   			<ul class="third-level">
+			   				<li>O Hubercie</li>
+			   				<li>O Grzegorzu</li>
+			   			</ul>
+			   		</li>
+			   		<li>
+			   			<a href="contact.html">Kontakt</a>
+			   			<ul class="third-level">
+			   				<li><a href="mailto:huberto1010@op.pl">Hubert</a></li>
+			   				<li><a href="mailto:grzegorz.chilczuk@student.pwr.edu.pl">Grzegorz</a></li>
+			   			</ul>
+			   		</li>
+			   		<li>
+			   			Współpraca
+			   			<ul class="third-level">
+			   				<li>Reklamy</li>
+			   				<li>Polecenia</li>
+			   			</ul>
+			   		</li>
+			   	</ul>
+			   </li>
+			</ul>
 		</nav>
+
+
 
 		<section id="2">
 			<h2>Kontakt</h2> 
