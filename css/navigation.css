@@ -1,0 +1,50 @@
+nav {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+    width: 10em;
+    background-color: pink;
+    z-index: 3;
+}
+
+a { 
+    text-decoration: none; 
+}
+
+nav ul { 
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+nav li { 
+    background-color: white;
+    width: 10em;
+    height: 2em;
+    color: black; 
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.5);
+}
+
+nav li:hover { 
+    background-color: PowderBlue;
+}
+
+nav:hover >.first-level { 
+    display: block;
+}
+
+.first-level li:hover > .second-level {
+    display: inline;
+    position: absolute;
+    left: 10em;
+}
+
+.second-level li:hover > .third-level {
+    display: inline;
+    position: absolute;
+    left: 10em;
+}
