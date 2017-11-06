@@ -13,7 +13,7 @@ body {
     background-image: url("../imgs/background-img2.jpg");
     background-attachment: scroll;
     background-color: lightsteelblue;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: 50%;
     background-position: bottom right;
     z-index: -2;    
@@ -39,3 +39,6 @@ figure.abs_img { position: absolute;
 				 bottom: 102px;
 				 right: 10px; }
 
+p:last-of-type {
+	color: blue;
+}
