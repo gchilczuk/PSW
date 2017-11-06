@@ -66,4 +66,9 @@ aside > p { position: relative;
 			right: 2ex;
 			text-align: justify;			
 		  }
+
+p:first-child {
+	color: lime;
+}
+
   			

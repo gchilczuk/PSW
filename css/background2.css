@@ -1,0 +1,41 @@
+header {
+    background-image: url("../imgs/background-img3.jpg");
+    background-color: pink;
+    background-repeat: repeat;   
+    position: static;    
+    height: 200px;
+    width: 100%;
+    background-position: left;
+    z-index: -1;    
+}
+
+body {
+    background-image: url("../imgs/background-img2.jpg");
+    background-attachment: scroll;
+    background-color: lightsteelblue;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: bottom right;
+    z-index: -2;    
+}
+
+nav { background-color: lightgrey;
+	  position: static;
+	  text-align: center;
+	  padding-bottom: 5pt;
+	  padding-top: 5pt; }
+
+footer > :not(span) { color: grey; }
+
+footer { background-color: grey; }
+
+figure.left_floated { float:left; }
+
+aside > figure.aside_fixed_img { position: fixed;
+						   		 bottom: 15px;
+						   		 right: 15px; }
+
+figure.abs_img { position: absolute;
+				 bottom: 102px;
+				 right: 10px; }
+

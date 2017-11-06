@@ -65,9 +65,14 @@ nav li:hover a:hover{
     left: 10em;
 }
 
-
-body{
-    background-color: lightsteelblue
+body {
+    background-image: url("../imgs/background-img1.jpg");
+    background-attachment: scroll;
+    background-color: lightsteelblue;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top right;
+    z-index: -2;    
 }
 
 /* END MENU*/
