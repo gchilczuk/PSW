@@ -51,3 +51,10 @@
 	background: -moz-radial-gradient(top, white, #9999ff);
 	background: radial-gradient(top, white, #9999ff);
 }
+
+div.multi-background {
+	background-image: url("../imgs/get_cooking.png"), url(../imgs/cook.png);
+	background-position: center, bottom right;
+	background-origin: border-box, content-box;	
+	background-repeat: no-repeat, no-repeat;	
+}
