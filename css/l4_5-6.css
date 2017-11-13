@@ -12,12 +12,12 @@
 
 #horizontal-gradient {
 	background: -webkit-gradient(
-		linear, left top, right top,
+		linear, center top, right top,
 		color-stop(15%, white), 
 		color-stop(70%, #b3b3ff),
 		color-stop(99%, Crimson));
 	background: -moz-linear-gradient(
-		left, white 15%, #b3b3ff 70%, Crimson 99%);
+		top, white 15%, #b3b3ff 70%, Crimson 99%);
 	background: linear-gradient(
 		to right, white 15%, #b3b3ff 70%, Crimson 99%);
 }
@@ -54,9 +54,6 @@
             #6199c7 47%,#3a84c3 51%,
             #419ad6 59%,#4bb8f0 71%,
             #3a8bc2 84%,#26558b 100%);
-    /*background: -webkit-radial-gradient(center, ellipse cover, white, #9999ff);*/
-	/*background: -moz-radial-gradient(center, ellipse cover, white, #9999ff);*/
-	/*background: radial-gradient(center, ellipse at center, white, #9999ff);*/
 }
 
 
@@ -83,8 +80,8 @@
             #3a8bc2 84%,#26558b 100%);}
 
 div.multi-background {
-	background-image: url("../imgs/get_cooking.png"), url(../imgs/cook.png);
-	background-position: center, bottom right;
-	background-origin: border-box, content-box;	
-	background-repeat: no-repeat, no-repeat;
+	background-image: url("../imgs/get_cooking.png"), url(../imgs/cook.png),  url(../imgs/cook.png);
+	background-position: center, bottom right, top right;
+	background-origin: border-box, content-box, content-box;
+	background-repeat:  no-repeat, no-repeat, no-repeat;
 }
