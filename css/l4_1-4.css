@@ -73,13 +73,14 @@ div {
     border-image-source: url('../imgs/border.png');
     border-image-slice: 10% 40%;
     border-image-repeat: stretch;
-    -webkit-animation: skew 4s 1 linear;
-    -moz-animation: skew 4s 1 linear;
-    animation: skew 4s 1 linear;
+    -webkit-animation: skew 4s 3 linear;
+    -moz-animation: skew 4s 3 linear;
+    animation: skew 4s 3 linear;
 }
 
 /*Zakomentowane bo wyrzuca błąd w walidatorze, jednak bez tego też działa np. na Mozilli czy Operze*/
-/*@-webkit-keyframes skew 
+
+/*@-webkit-keyframes skew
 {
     from { -webkit-transform: skewX(0deg); }
     25% { -webkit-transform: skewX(45deg); }
@@ -88,7 +89,7 @@ div {
     to { -webkit-transform: skewX(0); }
 }
 
-@-moz-keyframes skew 
+@-moz-keyframes skew
 {
     from { -moz-transform: skewX(0deg); }
     25% { -moz-transform: skewX(45deg); }
@@ -105,9 +106,6 @@ div {
     75% { transform: skewX(-22deg); }
     to { transform: skewX(0); }
 }
-
-
-/* subtask 9 */
 
 
 
