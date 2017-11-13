@@ -78,7 +78,8 @@ div {
     animation: skew 4s 1 linear;
 }
 
-@-webkit-keyframes skew 
+/*Zakomentowane bo wyrzuca błąd w walidatorze, jednak bez tego też działa np. na Mozilli czy Operze*/
+/*@-webkit-keyframes skew 
 {
     from { -webkit-transform: skewX(0deg); }
     25% { -webkit-transform: skewX(45deg); }
@@ -94,7 +95,7 @@ div {
     50% { -moz-transform: skewX(0); }
     75% { -moz-transform: skewX(-22deg); }
     to { -moz-transform: skewX(0); }
-}
+}*/
 
 @keyframes skew 
 {
