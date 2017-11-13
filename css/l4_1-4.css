@@ -73,6 +73,36 @@ div {
     border-image-source: url('../imgs/border.png');
     border-image-slice: 10% 40%;
     border-image-repeat: stretch;
+    -webkit-animation: skew 4s 1 linear;
+    -moz-animation: skew 4s 1 linear;
+    animation: skew 4s 1 linear;
+}
+
+@-webkit-keyframes skew 
+{
+    from { -webkit-transform: skewX(0deg); }
+    25% { -webkit-transform: skewX(45deg); }
+    50% { -webkit-transform: skewX(0); }
+    75% { -webkit-transform: skewX(-22deg); }
+    to { -webkit-transform: skewX(0); }
+}
+
+@-moz-keyframes skew 
+{
+    from { -moz-transform: skewX(0deg); }
+    25% { -moz-transform: skewX(45deg); }
+    50% { -moz-transform: skewX(0); }
+    75% { -moz-transform: skewX(-22deg); }
+    to { -moz-transform: skewX(0); }
+}
+
+@keyframes skew 
+{
+    from { transform: skewX(0deg); }
+    25% { transform: skewX(45deg); }
+    50% { transform: skewX(0); }
+    75% { transform: skewX(-22deg); }
+    to { transform: skewX(0); }
 }
 
 

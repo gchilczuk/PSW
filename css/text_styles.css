@@ -76,7 +76,7 @@ aside > p { position: relative;
 	-webkit-column-gap: 20px;
 	-moz-column-gap: 20px;
 	-o-column-gap: 20px;
-	column-count: 20px;
+	column-gap: 20px;
 
 	-webkit-column-rule: 2px dotted black;
 	-moz-column-rule: 2px dotted black;
@@ -95,7 +95,7 @@ aside > p { position: relative;
 		-webkit-column-gap: 10px;
 		-moz-column-gap: 10px;
 		-o-column-gap: 10px;
-		column-count: 10px;
+		column-gap: 10px;
 
 		-webkit-column-rule: 1px dotted black;
 		-moz-column-rule: 1px dotted black;
@@ -115,7 +115,7 @@ aside > p { position: relative;
 		-webkit-column-gap: 20px;
 		-moz-column-gap: 20px;
 		-o-column-gap: 20px;
-		column-count: 20px;
+		column-gap: 20px;
 
 		-webkit-column-rule: 2px dotted black;
 		-moz-column-rule: 2px dotted black;
@@ -135,7 +135,7 @@ aside > p { position: relative;
 		-webkit-column-gap: 30px;
 		-moz-column-gap: 30px;
 		-o-column-gap: 30px;
-		column-count: 30px;
+		column-gap: 30px;
 
 		-webkit-column-rule: 3px dotted black;
 		-moz-column-rule: 3px dotted black;
