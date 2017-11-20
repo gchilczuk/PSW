@@ -1,15 +1,35 @@
-window.addEventListener("load", init);
+"use strict";
+
+
 var rate;
 
-function init() {
-    document.getElementById("ratingBtn").addEventListener("click", rateWebsite);
+
+
+function captchaCore(){
+    var x;
+    x = 1 + Math.random();
+    var a = parseFloat(x.toFixed(1));
+    x = 1 + Math.random();
+    var b = parseFloat(x.toFixed(1));
+
+    var answer = window.prompt("Podaj wynik: " + a + " + " + b + " = ");
+    return parseFloat(answer) === a + b;
 }
 
-function rateWebsite() {
-	var answer = window.prompt("Oceń naszą stronę w skali 1-5");
-	rate = parseInt(answer);
-	showResponse();			
-	initSendResponseButton();
+function captcha(event) {
+    var isCorrect = false;
+    var i;
+    for (i = 0; i < 3 && !isCorrect; i+=1) {
+        isCorrect = captchaCore();
+    }
+
+    if (isCorrect) {
+        window.alert("Dziękujemy za Twoją opinię");
+    } else {
+        event.preventDefault();
+        window.alert("Przykro nam, nie możemy przesłać Twojej opinii.");
+    }
+    return isCorrect;
 }
 
 function showResponse() {
@@ -38,29 +58,16 @@ function initSendResponseButton() {
 	document.getElementById("responseBtn").addEventListener("click", captcha);
 }
 
-function captcha(event) {
-    var isCorrect = false;    
 
-    for (var i = 0; i < 3 && !isCorrect; i++) {
-    	isCorrect = captchaCore();
-    }   
 
-    if (isCorrect) {
-        window.alert("Dziękujemy za Twoją opinię");
-    } else {
-        event.preventDefault();
-        window.alert("Przykro nam, nie możemy przesłać Twojej opinii.")
-    }
-    return isCorrect;
+function rateWebsite() {
+    var answer = window.prompt("Oceń naszą stronę w skali 1-5");
+    rate = parseInt(answer);
+    showResponse();
+    initSendResponseButton();
 }
 
-function captchaCore(){
-    var a = parseFloat((1 + Math.random()).toFixed(2));    
-    var b = parseFloat((1 + Math.random()).toFixed(2)); 
-
-    var answer = window.prompt("Podaj wynik: " + a + " + " + b + " = ");    
-    var result = parseFloat(answer) === a + b;
-
-    return result;
+function init() {
+    document.getElementById("ratingBtn").addEventListener("click", rateWebsite);
 }
-
+window.addEventListener("load", init);

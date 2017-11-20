@@ -15,14 +15,8 @@
 		<link rel="stylesheet" type="text/css" href="css/l4_5-6.css">
 		<link rel="stylesheet" type="text/css" href="css/l4_animation.css">
 
-		<script type="text/javascript">			
-
-			window.addEventListener("load", init);
-
-			function init(){
-			    document.getElementById("printButton").addEventListener("click", printRecipes);
-			}
-
+		<script type="text/javascript">
+            "use strict";
 			function printRecipes() {
 				var recent = document.getElementById("recentRecipes");
 				var recipes = recent.getElementsByTagName("li");
@@ -30,10 +24,16 @@
 				var output = "";
 				while(i < recipes.length) {
 					output += recipes[i].innerHTML + "<br>";
-					i++;
+					i+=1;
 				}
 				document.writeln(output);
-			} 
+			}
+            function init(){
+                document.getElementById("printButton").addEventListener("click", printRecipes);
+            }
+
+            window.addEventListener("load", init);
+
 
 		</script>
 	</head>

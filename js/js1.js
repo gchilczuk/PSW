@@ -1,7 +1,11 @@
-window.addEventListener("load", init);
+"use strict";
 
-function init(){
-    document.getElementById("submitButton").addEventListener("click", captcha);
+function captchaCore() {
+    var a = Math.floor(1 + Math.random() * 10);
+    var b = Math.floor(1 + Math.random() * 10);
+
+    var answer = window.prompt("Podaj wynik: " + a + " + " + b + " = ");
+    return parseInt(answer) === a + b;
 }
 
 function captcha(event) {
@@ -9,25 +13,22 @@ function captcha(event) {
     var counter = 0;
 
     do {
-        counter++;
+        counter = counter + 1;
         isCorrect = captchaCore();
-    } while (!isCorrect && counter < 3)
+    } while (!isCorrect && counter < 3);
 
     if (isCorrect) {
         window.alert("Dziękujemy za rejestrację.");
     } else {
         event.preventDefault();
-        window.alert("Przykro nam, nie możemy Cię zarejestrować.")
+        window.alert("Przykro nam, nie możemy Cię zarejestrować.");
     }
     return isCorrect;
 }
 
-function captchaCore(){
-    var a = Math.floor(1 + Math.random()*10);
-    var b = Math.floor(1 + Math.random()*10);
 
-    var answer = window.prompt("Podaj wynik: " + a + " + " + b + " = ");
-    var result = parseInt(answer) === a + b;
-
-    return result;
+function init() {
+    document.getElementById("submitButton").addEventListener("click", captcha);
 }
+
+window.addEventListener("load", init);
