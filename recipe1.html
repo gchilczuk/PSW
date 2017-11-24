@@ -25,7 +25,8 @@
 		<link rel="stylesheet" type="text/css" href="css/background.css">
 		<link rel="stylesheet" type="text/css" href="css/form_styles.css">
 		<link rel="stylesheet" type="text/css" href="css/table_styles.css">
-		<link rel="stylesheet" type="text/css" href="css/l4_5-6.css">		
+		<link rel="stylesheet" type="text/css" href="css/l4_5-6.css">	
+		<script src="js/dom5_forms.js"></script>	
 	</head>
 
 	<body id="vertical-gradient">
@@ -253,27 +254,27 @@
 				<meter min="0" max="10" value="9.5"></meter>10
 			</p>
 
-			<form>				
+			<form id="commentsForm">				
 				<h3>Dodaj komentarz</h3>
 
 					<p><label>Użytkownik<sup>*</sup>
-						<input type="text" name="username" size="25" maxlength="25">
+						<input id="username" type="text" name="username" size="25" maxlength="25">
 					</label></p>
 
 					<p><label>E-mail<sup>*</sup>
-						<input type="email" name="email" size="30" maxlength="50">
+						<input id="email" type="email" name="email" size="30" maxlength="50">
 					</label></p>				
 
 					<p>
 						<label>Płeć<sup>*</sup></label>
 
 						<label>
-							<input type="radio" name="gender" value="mezczyzna">
+							<input id="man" type="radio" name="gender" value="mezczyzna">
 							Mężczyzna
 						</label>
 
 						<label>
-							<input type="radio" name="gender" value="kobieta">
+							<input id="woman" type="radio" name="gender" value="kobieta">
 							Kobieta
 						</label>
 					</p>
@@ -281,7 +282,7 @@
 					<p>
 						<label>Oceń przepis<sup>*</sup>
 							
-							<select name="rating">							
+							<select id="rating" name="rating">							
 								<optgroup label="Wyśmienity">
 									<option selected>10</option>
 									<option>9</option>
@@ -317,25 +318,27 @@
 					</label></p>		
 
 					<p><label>Treść<sup>*</sup>
-						<textarea name="comments" rows="4" cols="50" maxlength="200"></textarea>
+						<textarea id="content" name="comments" rows="4" cols="50" maxlength="200"></textarea>
 					</label></p>	
 
 					<p><label>
-						<input type="checkbox" name="subscribtion" value="subscribtion">
+						<input id="sub" type="checkbox" name="subscribtion" value="subscribtion">
 						Chcę otrzymywać informacje o nowych przepisach, które pojawią się na stronie.
 					</label></p>	
 
 					<p><label>
-						<input type="checkbox" name="questions" value="questions">
+						<input id="question" type="checkbox" name="questions" value="questions">
 						Zgadzam się na otrzymywanie poprzez Serwis pytań od innych użytkowników dotyczących mojej opinii,
 						w tym na przesyłanie przez Serwis powiadomień o takich pytaniach.
 					</label></p>	
 
 					<p>* - <mark>Pola obowiązkowe</mark></p>
 
+					<div id="helpText"></div>
+
 					<p>
-						<input type="submit" value="Wyślij">
-						<input type="reset" value="Wyczyść">
+						<input id="submit" type="submit" value="Wyślij">
+						<input id="reset" type="reset" value="Wyczyść">
 					</p>					
 			</form>
 		</section>	
