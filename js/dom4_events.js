@@ -4,10 +4,14 @@ function changeImgSrc(e) {
 	var image = document.getElementById("lasagne3_img");
 	if(e.altKey) {
 		image.src = "imgs/lasagne2.jpg";
-	}
-	else {
+	}		
+}
+
+function restoreDefaultSrc(e) {
+	var image = document.getElementById("lasagne3_img");
+	if(e.altKey) {
 		image.src = "imgs/lasagne.jpg";
-	}
+	}	
 }
 
 function zoomIn(e) {
@@ -30,6 +34,7 @@ function init() {
 	document.getElementById("lasagne3_img").addEventListener("click", zoomOut, false);
 	document.getElementById("lasagne3_img").addEventListener("dblclick", zoomIn, false);
 	document.getElementById("lasagne3_img").addEventListener("mousedown", changeImgSrc, false);
+	document.getElementById("lasagne3_img").addEventListener("mouseup", restoreDefaultSrc, false);
 }
 
 window.addEventListener("load", init, false);
