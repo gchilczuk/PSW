@@ -36,10 +36,10 @@ function registerListeners(obj, msgNumber) {
 function registerButtons() {
    var form = document.getElementById("commentsForm");
    form.addEventListener("submit", 
-      function() { return confirm( "Czy na pewno chcesz przesłać ten komentarz?"); },
+      function(event) { event.preventDefault(); return confirm( "Czy na pewno chcesz przesłać ten komentarz?"); },
       false );
    form.addEventListener("reset", 
-      function() { return confirm( "Czy na pewno chcesz zresetować formularz?"); }, 
+      function(event) { event.preventDefault(); return confirm( "Czy na pewno chcesz zresetować formularz?"); },
       false );
 }
 

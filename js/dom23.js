@@ -12,8 +12,8 @@ function printContent() {
     };
     var anchors = document.anchors;
     var content = "Rodzaje diet: <br>";
-    var current;
-    for (var i = 0; i < anchors.length; i += 1){
+    var current, i;
+    for (i = 0; i < anchors.length; i += 1){
         current = anchors.item(i);
         if (!!dictionary[current.name]) {
             content += "→ <a href=\"#";
@@ -40,8 +40,9 @@ function printSource() {
 function switchImages(event) {
     event.preventDefault();
     var images = document.images;
+    var i;
     if (visibleImage) {
-        for (var i = 0; i < images.length; i += 1){
+        for (i = 0; i < images.length; i += 1){
             images.item(i).style.visibility = "hidden";
         }
         visibleImage = false;
