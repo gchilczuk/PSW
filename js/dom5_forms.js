@@ -39,7 +39,7 @@ function registerButtons() {
       function(event) { event.preventDefault(); return confirm( "Czy na pewno chcesz przesłać ten komentarz?"); },
       false );
    form.addEventListener("reset", 
-      function(event) { event.preventDefault(); return confirm( "Czy na pewno chcesz zresetować formularz?"); },
+      function(event) {  return confirm( "Czy na pewno chcesz zresetować formularz?"); },
       false );
 }
 
