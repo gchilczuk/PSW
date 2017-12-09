@@ -43,11 +43,21 @@
         print('<p class="detailsText">Twoje żądanie zostało wysłane do nas za pomocą metody '.$method.' z adresu ip o numerze '.$ip.'</p>');
     ?>
 
-    <?php
+    <?php    	
+    	foreach ($_POST as $key => $val) {
+    		$input_names[] = $key;
+    	}
+    	
+    	$aliases_names = array("Imię", "Nazwisko", "Dzień", "Miesiąc", "Rok", "Email", "Telefon");
+
+    	for($i = 0; $i < count($input_names); ++$i) {
+    		$aliases[$input_names[$i]] = $aliases_names[$i]; 
+    	}   	
+    	
         print("<p class=\"detailsText\">Podczas rejestracji podałeś nam następujące dane:</br>");
         for( reset($_POST); $element = key($_POST); next($_POST)){ 
         	if(strcmp($_POST[$element], "") != 0) {
-        		print("$element : $_POST[$element]</br>");
+        		print("$aliases[$element] : $_POST[$element]</br>");
         	}            
         } 	        
         print("</br>Nie przejmuj się jeżeli pomyliłeś się podczas rejestracji. Zawsze możesz zmienić część swoich danych w ustawieniach konta!</p>");	
