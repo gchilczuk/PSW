@@ -31,7 +31,7 @@
 		<section id="1">
 			<h2>Rejestracja</h2> 
 			<p>
-			<form autocomplete="on">
+			<form autocomplete="on" method="post" action="php/forms.php">
 				<p>
 					<label> Imię
 						<input type="text" name="first_name" size="30" maxlength="30" autofocus />
@@ -71,7 +71,7 @@
 				</p>
 				<p>
 					<label>Numer telefonu
-						<input type="tel" name="tel" pattern = "\d{9}">
+						<input type="tel" name="tel">
 					</label>
 				</p>
 				<p>
