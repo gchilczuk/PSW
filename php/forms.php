@@ -26,12 +26,23 @@
 	</style>
 </head>
 <body>
-	<?php 
+	<?php
+    define("MIN_AGE", 13);
+    $antyspam = $_POST["antyspam"];
+    settype($antyspam, "int");
 		if(!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{3}$/", $_POST["tel"])) {			
 			print('<img src="php_imgs/error_icon.png" alt="ikonka_bledu" class="icon">
 				<p class = "registerText">Podany numer telefonu jest w niewłaściwym formacie!</p>');
 			die("</body></html>");			
-		}
+		} elseif ($antyspam != 4){
+            print('<img src="php_imgs/error_icon.png" alt="ikonka_bledu" class="icon">
+				<p class = "registerText">Niepoprawna odpowiedź na filtr antyspamowy!</p>');
+            die("</body></html>");
+        } elseif ($_POST["byear"] != "" && (int) date("Y") - (int) $_POST["byear"] < MIN_AGE){
+            print('<img src="php_imgs/error_icon.png" alt="ikonka_bledu" class="icon">
+				<p class = "registerText">Musisz mieć conajmniej 13 lat aby moć zarejestrować sie w serwisie.</p>');
+            die("</body></html>");
+        }
 	?>
 
 	<?php		
@@ -50,19 +61,25 @@
     	
     	$aliases_names = array("Imię", "Nazwisko", "Dzień", "Miesiąc", "Rok", "Email", "Telefon");
 
-    	for($i = 0; $i < count($input_names); ++$i) {
+    	for($i = 0; $i < count($input_names) - 1; ++$i) {
     		$aliases[$input_names[$i]] = $aliases_names[$i]; 
     	}   	
     	
         print("<p class=\"detailsText\">Podczas rejestracji podałeś nam następujące dane:</br>");
         for( reset($_POST); $element = key($_POST); next($_POST)){ 
-        	if(strcmp($_POST[$element], "") != 0) {
+        	if(strcmp($_POST[$element], "") != 0 && $element != "antyspam" && $element != "email") {
         		print("$aliases[$element] : $_POST[$element]</br>");
-        	}            
+        	} elseif ($element == "email") {
+        	    print ("$aliases[$element] : ". preg_replace("/@/", " (at) ", $_POST[$element])."</br>");
+            }
         } 	        
         print("</br>Nie przejmuj się jeżeli pomyliłeś się podczas rejestracji. Zawsze możesz zmienić część swoich danych w ustawieniach konta!</p>");	
         die("</body></html>");
 	?>
+
+
+
+
 
 </body>
 </html>
