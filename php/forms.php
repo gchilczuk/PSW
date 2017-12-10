@@ -30,25 +30,34 @@
     define("MIN_AGE", 13);
     $antyspam = $_POST["antyspam"];
     settype($antyspam, "int");
-		if(!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{3}$/", $_POST["tel"])) {			
-			print('<img src="php_imgs/error_icon.png" alt="ikonka_bledu" class="icon">
-				<p class = "registerText">Podany numer telefonu jest w niewłaściwym formacie!</p>');
-			die("</body></html>");			
+
+    $result = false;
+
+		if(!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{3}$/", $_POST["tel"])) {
+
+			$result = 'Podany numer telefonu jest w niewłaściwym formacie!';
+
 		} elseif ($antyspam != 4){
-            print('<img src="php_imgs/error_icon.png" alt="ikonka_bledu" class="icon">
-				<p class = "registerText">Niepoprawna odpowiedź na filtr antyspamowy!</p>');
-            die("</body></html>");
+		    $result = 'Niepoprawna odpowiedź na filtr antyspamowy!';
+
         } elseif ($_POST["byear"] != "" && (int) date("Y") - (int) $_POST["byear"] < MIN_AGE){
-            print('<img src="php_imgs/error_icon.png" alt="ikonka_bledu" class="icon">
-				<p class = "registerText">Musisz mieć conajmniej 13 lat aby moć zarejestrować sie w serwisie.</p>');
+		    $result = 'Musisz mieć conajmniej 13 lat aby moć zarejestrować sie w serwisie.';
+        }
+
+        if (!$result){
+		    print ('<img src="php_imgs/ok_icon.png" alt="ikonka_ok" class="icon">');
+        }
+        else{
+		    print('<img src="php_imgs/error_icon.png" alt="ikonka_bledu" class="icon">
+				<p class = "registerText">'.$result.'</p>');
             die("</body></html>");
         }
+
 	?>
 
 	<?php		
 		$name = $_POST["first_name"];
-		print("<img src=\"php_imgs/ok_icon.png\" alt=\"ikonka_ok\" class=\"icon\">
-				<p class = \"registerText\">Witaj $name, zostałeś zarejestrowany pomyślnie!</p>");	
+		print("<p class = \"registerText\">Witaj $name, zostałeś zarejestrowany pomyślnie!</p>");
 		$ip = $_SERVER['REMOTE_ADDR'] ;
         $method = $_SERVER['REQUEST_METHOD'] ;
         print('<p class="detailsText">Twoje żądanie zostało wysłane do nas za pomocą metody '.$method.' z adresu ip o numerze '.$ip.'</p>');
