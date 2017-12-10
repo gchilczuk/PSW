@@ -33,7 +33,7 @@
 
     $result = false;
 
-		if(!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{3}$/", $_POST["tel"])) {
+		if($_POST["tel"] != "" && !preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{3}$/", $_POST["tel"])) {
 
 			$result = 'Podany numer telefonu jest w niewłaściwym formacie!';
 
