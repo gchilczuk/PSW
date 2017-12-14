@@ -11,10 +11,8 @@ session_start(); ?>
 <body>
 <?php
 foreach ($_SESSION as $key => $value){
-    print ("$key : $value <br>");
+    print ("<p>$key : $value </p>");
 }
-print (SID);
-print ('noooo');
 ?>
 
 <form action="logout_process.php">

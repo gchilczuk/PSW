@@ -16,7 +16,7 @@ if (!isset($users[$username]) || $password != $users[$username]){
         $back_to .= $_SESSION['back_to'];
         unset($_SESSION['back_to']);
     } else {
-        $back_to .= 'index.html';
+        $back_to .= 'index.php';
     }
     header('location:'.$back_to);
 }

@@ -26,19 +26,26 @@ if (!isset($_SESSION['user'])){
 	</head>
 
 	<body>
-		
+
 		<header>
 			<h1 class="tf-title">Serwis kulinarny</h1>
 		</header>
 
+        <div align="right" style="padding-right: 15px; font-size: small; font-family: cursive, courier, sans-serif;">
+        Zalogowany jako: <?php print($_SESSION['user']) ?>
+            <a style="color: black; font-weight: normal"
+               href="php/logout_process.php" ><u>wyloguj</u></a>
+        </div>
 		<nav>
-			<a href="index.html">Start</a>
-			<a href="recipes.html">Przepisy</a>
+			<a href="index.php">Start</a>
+			<a href="recipes.php">Przepisy</a>
 			<a href="converter.php">Przelicznik</a>
 			<a href="">O nas</a>
 			<a href="contact.html">Kontakt</a>
 			<a href="register.html">Rejestracja</a>
-		</nav>			
+
+        </nav>
+
 
 		<section id="1">
 			<h2 class="subtitle">Przelicznik produktów</h2>
@@ -177,9 +184,9 @@ if (!isset($_SESSION['user'])){
 						<td>8 g</td>
 					</tr>
 				</tbody>
-				
-				</table>				
-			</figure>			
+
+				</table>
+			</figure>
 		</section>
 
 		<footer>

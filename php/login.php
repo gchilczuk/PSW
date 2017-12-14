@@ -27,7 +27,6 @@
 
         <p>
             <input name="login" type = "submit" value = "Wyślij">
-            <input id = "reset" type = "reset" value = "Wyczyść" >
         </p>
     </form>
 </div>
