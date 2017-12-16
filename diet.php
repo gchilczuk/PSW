@@ -24,6 +24,8 @@ if (!isset($_SESSION['user'])){
     <link rel="stylesheet" type="text/css" href="css/table_styles.css">
     <!--<link rel="stylesheet" type="text/css" href="css/l4_5-6.css">-->
     <link rel="stylesheet" type="text/css" href="css/l4_animation.css">
+    <link rel="stylesheet" type="text/css" href="styles.php" />
+
 
     <script src="js/dom23.js"></script>
     <style type="text/css">
@@ -96,7 +98,7 @@ if (!isset($_SESSION['user'])){
     <a href="index.php">Start</a>
     <a href="recipes.php">Przepisy</a>
     <a href="converter.php">Przelicznik</a>
-    <a href="">O nas</a>
+    <a href="settings.html">Ustawienia</a>
     <a href="contact.html">Kontakt</a>
     <a href="register.html">Rejestracja</a>
 </nav>

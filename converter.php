@@ -40,7 +40,7 @@ if (!isset($_SESSION['user'])){
 			<a href="index.php">Start</a>
 			<a href="recipes.php">Przepisy</a>
 			<a href="converter.php">Przelicznik</a>
-			<a href="">O nas</a>
+			<a href="settings.html">Ustawienia</a>
 			<a href="contact.html">Kontakt</a>
 			<a href="register.html">Rejestracja</a>
 
