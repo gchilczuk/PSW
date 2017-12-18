@@ -23,7 +23,8 @@ if (!isset($_SESSION['user'])){
 		<link rel="stylesheet" type="text/css" href="css/form_styles.css">
 		<link rel="stylesheet" type="text/css" href="css/tables.css">
 		<link rel="stylesheet" type="text/css" href="css/l4_animation.css">
-	</head>
+
+    </head>
 
 	<body>
 
@@ -40,7 +41,7 @@ if (!isset($_SESSION['user'])){
 			<a href="index.php">Start</a>
 			<a href="recipes.php">Przepisy</a>
 			<a href="converter.php">Przelicznik</a>
-			<a href="settings.html">Ustawienia</a>
+			<a href="settings.php">Ustawienia</a>
 			<a href="contact.html">Kontakt</a>
 			<a href="register.html">Rejestracja</a>
 
