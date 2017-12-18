@@ -26,6 +26,7 @@
    	  <img src="php/php_imgs/cookie.png" alt="ciastek" class="icon">				
       <p class="detailsText">Zapisano ciasteczko</p>
       <p class="detailsText">Pokaż zapisane <a href = "php/read_cookies.php">ciasteczka</a></p>
+   <p class="detailsText"> <a href="settings.html">Powrót</a> </p>
    </body>
 </html>
 
