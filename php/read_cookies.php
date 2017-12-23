@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+if (isset($_SESSION['user'])){
+
+print('
 <!DOCTYPE html>
 
 <html>
@@ -6,11 +12,16 @@
     <title>read cookies</title>
     <link rel="stylesheet" type="text/css" href="../styles.php" />
 </head>
-<body>
-<?php
+<body>');
+
 foreach ($_COOKIE as $key => $value )
     print( "<p>$key: $value</p>" );
-?>
 
-</body>
-</html>
+print('</body>
+</html>');
+
+}
+
+
+
+?>

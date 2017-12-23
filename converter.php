@@ -43,7 +43,7 @@ if (!isset($_SESSION['user'])){
 			<a href="converter.php">Przelicznik</a>
 			<a href="settings.php">Ustawienia</a>
 			<a href="contact.html">Kontakt</a>
-			<a href="register.html">Rejestracja</a>
+			<a href="register.php">Rejestracja</a>
 
         </nav>
 

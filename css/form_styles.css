@@ -1,9 +1,8 @@
 input:checked { box-shadow: 0 0 0 1px green; }
 
-/* Narazie brak pomysłu */
-input:disabled {background-color: red;}
+input:disabled {background-color: lightgray;}
 
-input[type=text]:enabled, input[type=email]:enabled, input[type=tel]:enabled { background-color: #ccffcc; }
+input:enabled { background-color: #ccffcc; }
 
 /* css1: Z8 - atrybuty border*/
 input:required { border-color: Crimson;
