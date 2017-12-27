@@ -45,23 +45,23 @@ session_start();
 			<form autocomplete="on" method="post" action="php/register.php">
 				<p>
 					<label> Login
-						<input type="text" name="first_name" size="32" maxlength="32"
+						<input type="text" name="login" size="32" maxlength="32"
 						<?php if (isset($_SESSION['user'])) { print('disabled');} ?> autofocus required/>
 					</label>
 				</p>
 				<p>
 					<label> Hasło
-						<input type="password" name="first_name" size="32"  required/>
+						<input type="password" name="password" size="32"  required/>
 					</label> (min 8 znaków)
 				</p>
 				<p>
 					<label> Imię
-						<input type="text" name="first_name" size="32" maxlength="32" />
+						<input type="text" name="firstName" size="32" maxlength="32" />
 					</label>
 				</p>
 				<p>
 					<label> Nazwisko
-						<input type="text" name="second_name" size="32" maxlength="64">
+						<input type="text" name="lastName" size="32" maxlength="64">
 					</label>
 				</p>
 				
@@ -73,7 +73,7 @@ session_start();
 				</p>
 				<p>
 					<label>Numer telefonu
-						<input type="tel" name="tel" size="32" >
+						<input type="tel" name="phone" size="32" >
 					</label>
 				</p>
 				<p>
@@ -83,7 +83,7 @@ session_start();
                     </label>
                 </p>
 				<p>
-					<input id="submitButton" type="submit" value="Wyślij" >
+					<input id="submitButton" name="submit" type="submit" value="Wyślij" >
 				</p>
 
 			</form>
