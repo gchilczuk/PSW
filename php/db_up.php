@@ -44,7 +44,7 @@ print("Table created<br>");
 
 // Insert sample user
 $admin_hash = hash('sha256', 'admin');
-$query = "INSERT INTO users (login, password) VALUES('admin', '$admin_hash');";
+$query = "INSERT INTO users (login, password, email) VALUES('admin', '$admin_hash', 'address@example.com');";
 
 if (!($result = mysqli_query($database, $query))) {
     die("Table insertion failed: " . mysqli_error($database));
