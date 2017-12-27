@@ -14,4 +14,5 @@ if (!($result = mysqli_query($database, $query))) {
 }
 print("Database droppped (if existed)<br>");
 
+mysqli_close($database);
 die("Full success!");

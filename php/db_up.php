@@ -42,4 +42,14 @@ if (!($result = mysqli_query($database, $query))) {
 }
 print("Table created<br>");
 
+// Insert sample user
+$admin_hash = hash('sha256', 'admin');
+$query = "INSERT INTO users (Login, Password_hash) VALUES('admin', '$admin_hash');";
+
+if (!($result = mysqli_query($database, $query))) {
+    die("Table insertion failed: " . mysqli_error($database));
+}
+print("Data inserted<br>");
+
+mysqli_close($database);
 die("Full success!");
