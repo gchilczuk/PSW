@@ -77,12 +77,6 @@ session_start();
 					</label>
 				</p>
 				<p>
-                    <br>Filtr antyspamowy
-                    <label>Podaj wyni: 2+2=
-                        <input type="text" name="antyspam" required>
-                    </label>
-                </p>
-				<p>
 					<input id="submitButton" name="submit" type="submit" value="Wyślij" >
 				</p>
 
