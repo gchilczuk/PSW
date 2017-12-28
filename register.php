@@ -135,8 +135,6 @@ if (isset($_SESSION['user'])) {
 
                 $query .= join(', ', $to_update) . " WHERE login = '" . $_SESSION['user'] ."';";
 
-                print ($query . '<br>');
-
                 $message = "Dane zostały zmienione pomyślnie";
             } else {  // new user
                 $insert_names = array();
