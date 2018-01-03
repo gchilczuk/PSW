@@ -221,6 +221,7 @@ if (isset($_SESSION['user'])) {
         }
         print("<p><input id='submitButton' name='submit' type='submit' value='Zatwierdź'></p>");
         print('</form>');
+        print("<form method='post' action='php/db_show.php'><input id='submitButton' type='submit' value='Pokaż użytkowników'></form>");
     }
     ?>
 </section>
