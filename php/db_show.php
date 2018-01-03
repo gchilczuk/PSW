@@ -42,10 +42,45 @@
 		    'phone' => 'Telefon'
 		);
 
+		if (!($database = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME))) {
+            die("Connection failed: " . mysqli_error($database));
+        }        
+
 		print("<form method = 'post' action = 'db_show.php'><h3>Filtruj użytkowników</h3>");
-		print("<p><label>Login: </label><input type='text' name='login'/></p>");
-		print("<p><label>Imie: </label><input type='text' name='firstname'/></p>");
-		print("<p><label>Nazwisko: </label><input type='text' name='lastname'/></p>");
+
+		$logins = "SELECT DISTINCT login FROM Users ORDER BY login";		
+		if (!($result = mysqli_query($database, $logins))) {
+            die("Query execution failed: " . mysqli_error($database));
+        }	
+        print("<p><label>Login: </label><select name='login'><option selected></option>");
+        while($row = mysqli_fetch_row($result)) {
+            foreach ($row as $key => $value) 
+                print("<option>$value</option>");            
+        } 
+        print('</select></p>');
+
+		$firstnames = "SELECT DISTINCT firstName FROM Users ORDER BY firstName";
+		if (!($result = mysqli_query($database, $firstnames))) {
+            die("Query execution failed: " . mysqli_error($database));
+        }	
+        print("<p><label>Imię: </label><select name='firstname'><option selected></option>");
+        while($row = mysqli_fetch_row($result)) {
+            foreach ($row as $key => $value) 
+                print("<option>$value</option>");            
+        } 
+        print('</select></p>');
+		
+		$lastnames = "SELECT DISTINCT lastName FROM Users ORDER BY lastName";
+		if (!($result = mysqli_query($database, $lastnames))) {
+            die("Query execution failed: " . mysqli_error($database));
+        }	
+        print("<p><label>Nazwisko: </label><select name='lastname'><option selected></option>");
+        while($row = mysqli_fetch_row($result)) {
+            foreach ($row as $key => $value) 
+                print("<option>$value</option>");            
+        } 
+        print('</select></p>');
+		
 		print("<p><input type='submit' name='submit' value='Filtruj'></p>");
 		print("</form>");
 
@@ -93,9 +128,7 @@
 			$query = $base_query . " WHERE login = '$login' AND firstName = '$firstname' AND lastName = '$lastname'";
 		}	
 
-		if (!($database = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME))) {
-            die("Connection failed: " . mysqli_error($database));
-        }
+		
         if (!($result = mysqli_query($database, $query))) {
             die("Query execution failed: " . mysqli_error($database));
         }	
