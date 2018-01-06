@@ -24,7 +24,7 @@
         <a href="">Przepisy</a>
         <a href="">Przelicznik</a>
         <a href="Onas.aspx">O nas</a>
-        <a href="">Rejestracja</a>
+        <a href="Register.aspx">Rejestracja</a>
     </nav>
     <form id="form1" runat="server">
         <div>

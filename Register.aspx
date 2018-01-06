@@ -25,8 +25,63 @@
         <a href="Onas.aspx">O nas</a>
         <a href="">Rejestracja</a>
     </nav>
-    <form id="form1" runat="server">
+    <form id="regform" runat="server">
         <div>
+            <p>
+                <label>
+                    Login:
+                    <asp:TextBox ID="login" runat="server" Width="300px"></asp:TextBox>
+                </label>
+            </p>
+            <p>
+                <asp:RequiredFieldValidator ID="loginRequiredValidator" runat="server"
+                    ControlToValidate="login" Display="Dynamic"
+                    ErrorMessage="Login nie może być pusty!" ForeColor="Red"></asp:RequiredFieldValidator>
+            </p>
+            
+            <p>
+                <label>
+                    Hasło:
+                    <asp:TextBox ID="password" TextMode="Password" runat="server" Width="300px"></asp:TextBox>
+                </label>
+            </p>
+            <p>
+                <asp:RequiredFieldValidator ID="passwordRequiredValidator" runat="server"
+                    ControlToValidate="password" Display="Dynamic"
+                    ErrorMessage="Hasło nie może być puste!" ForeColor="Red"></asp:RequiredFieldValidator>
+            </p>
+            <p>
+                <label>
+                    Email:
+                    <asp:TextBox ID="email" runat="server" Width="300px"></asp:TextBox>
+                </label>
+            </p>
+            <p>
+                <asp:RequiredFieldValidator ID="emailRequiredValidator" runat="server"
+                    ControlToValidate="email" Display="Dynamic"
+                    ErrorMessage="Email nie może być pusty!" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="emailRegularExpressionValidator" 
+                   runat="server" ControlToValidate="email" Display="Dynamic" 
+                   ErrorMessage="Adres email jest niepoprawny" ForeColor="Red" 
+                   ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+            </p>
+            <p>
+                <label>
+                    Imię i nazwisko:
+                    <asp:TextBox ID="name" runat="server" Width="300px"></asp:TextBox>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Tel:
+                    <asp:TextBox ID="phone" runat="server" Width="300px"></asp:TextBox>
+                </label>
+            </p>
+
+            <p>
+                <asp:Button ID="submit" runat="server" Text="Zarejestruj" />
+            </p>
+
         </div>
     </form>
     <footer>
