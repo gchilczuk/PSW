@@ -1,0 +1,87 @@
+#diagonal-gradient {
+	background: -webkit-gradient(
+		linear, left top, right bottom,
+		color-stop(15%, white), 
+		color-stop(70%, #b3b3ff),
+		color-stop(99% Crimson));
+	background: -moz-linear-gradient(
+		top left, white 15%, #b3b3ff 70%, Crimson 99%);
+	background: linear-gradient(
+		to bottom right, white 15%, #b3b3ff 70%, Crimson 99%);
+}
+
+#horizontal-gradient {
+	background: -webkit-gradient(
+		linear, center top, right top,
+		color-stop(15%, white), 
+		color-stop(70%, #b3b3ff),
+		color-stop(99%, Crimson));
+	background: -moz-linear-gradient(
+		top, white 15%, #b3b3ff 70%, Crimson 99%);
+	background: linear-gradient(
+		to right, white 15%, #b3b3ff 70%, Crimson 99%);
+}
+
+#vertical-gradient {
+    background: -webkit-gradient(
+            linear, right top, right top,
+            color-stop(15%, white),
+            color-stop(70%, #b3b3ff),
+            color-stop(99%, Crimson));
+	background: -moz-linear-gradient(
+		top, white 15%, #b3b3ff 70%, Crimson 99%);
+	background: linear-gradient(
+		to bottom, white 15%, #b3b3ff 70%, Crimson 99%);
+}
+
+#center-radial-gradient {
+    background: #cedbe9;
+    background: -moz-radial-gradient(
+            center, ellipse cover,
+            #cedbe9 0%, #aac5de 17%,
+            #6199c7 47%, #3a84c3 51%,
+            #419ad6 59%, #4bb8f0 71%,
+            #3a8bc2 84%, #26558b 100%);
+    background: -webkit-radial-gradient(
+            center, ellipse cover,
+            #cedbe9 0%,#aac5de 17%,
+            #6199c7 47%,#3a84c3 51%,
+            #419ad6 59%,#4bb8f0 71%,
+            #3a8bc2 84%,#26558b 100%);
+    background: radial-gradient(
+            ellipse at center,
+            #cedbe9 0%,#aac5de 17%,
+            #6199c7 47%,#3a84c3 51%,
+            #419ad6 59%,#4bb8f0 71%,
+            #3a8bc2 84%,#26558b 100%);
+}
+
+
+
+#top-radial-gradient {
+    background: #cedbe9;
+    background: -moz-radial-gradient(
+            top, ellipse cover,
+            #cedbe9 0%, #aac5de 17%,
+            #6199c7 47%, #3a84c3 51%,
+            #419ad6 59%, #4bb8f0 71%,
+            #3a8bc2 84%, #26558b 100%);
+    background: -webkit-radial-gradient(
+            top, ellipse cover,
+            #cedbe9 0%,#aac5de 17%,
+            #6199c7 47%,#3a84c3 51%,
+            #419ad6 59%,#4bb8f0 71%,
+            #3a8bc2 84%,#26558b 100%);
+    background: radial-gradient(
+            ellipse at top,
+            #cedbe9 0%,#aac5de 17%,
+            #6199c7 47%,#3a84c3 51%,
+            #419ad6 59%,#4bb8f0 71%,
+            #3a8bc2 84%,#26558b 100%);}
+
+div.multi-background {
+	background-image: url("../imgs/get_cooking.png"), url(../imgs/cook.png),  url(../imgs/cook.png);
+	background-position: center, bottom right, top right;
+	background-origin: border-box, content-box, content-box;
+	background-repeat:  no-repeat, no-repeat, no-repeat;
+}

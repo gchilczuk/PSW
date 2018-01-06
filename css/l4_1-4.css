@@ -1,0 +1,111 @@
+/* subtask 10 */
+/* latin-ext */
+@font-face {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(https://fonts.gstatic.com/s/inconsolata/v16/BjAYBlHtW3CJxDcjzrnZCCYE0-AqJ3nfInTTiDXDjU4.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(https://fonts.gstatic.com/s/inconsolata/v16/BjAYBlHtW3CJxDcjzrnZCI4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v20/9NqNYV_LP7zlAF8jHr7f1vY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v20/cycBf3mfbGkh66G5NhszPQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/* subtasks 1-4 */
+#p0 {
+    font-family: Lobster;
+    text-shadow: 5px 5px 8px #7875ff;
+}
+
+#p1, #p2,#p3 {
+    font-family: Inconsolata;
+}
+
+#p1 {
+    text-shadow: -4px -4px 5px #ffa150;
+}
+
+img {
+    box-shadow: -25px -25px 20px rgba(120, 111, 16, 0.84);
+}
+
+#p3 {
+    border: 15px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url('../imgs/border.png') 30 round;
+    -moz-border-image: url('../imgs/border.png') 30 round;
+    -o-border-image: url('../imgs/border.png') 30 round;
+    border-image: url('../imgs/border.png') 30 round;
+}
+
+div {
+    border: 10px solid hsla(11, 100%, 54%, 0.27);
+    -webkit-border-radius: 35px;
+}
+
+/* subtask 7*/
+#komt {
+    text-align: center;
+    border: 15px solid transparent;
+    padding: 15px;
+    border-image-source: url('../imgs/border.png');
+    border-image-slice: 10% 40%;
+    border-image-repeat: stretch;
+    -webkit-animation: skew 4s 3 linear;
+    -moz-animation: skew 4s 3 linear;
+    animation: skew 4s 3 linear;
+}
+
+/*Zakomentowane bo wyrzuca błąd w walidatorze, jednak bez tego też działa np. na Mozilli czy Operze*/
+
+/*@-webkit-keyframes skew
+{
+    from { -webkit-transform: skewX(0deg); }
+    25% { -webkit-transform: skewX(45deg); }
+    50% { -webkit-transform: skewX(0); }
+    75% { -webkit-transform: skewX(-22deg); }
+    to { -webkit-transform: skewX(0); }
+}
+
+@-moz-keyframes skew
+{
+    from { -moz-transform: skewX(0deg); }
+    25% { -moz-transform: skewX(45deg); }
+    50% { -moz-transform: skewX(0); }
+    75% { -moz-transform: skewX(-22deg); }
+    to { -moz-transform: skewX(0); }
+}*/
+
+@keyframes skew 
+{
+    from { transform: skewX(0deg); }
+    25% { transform: skewX(45deg); }
+    50% { transform: skewX(0); }
+    75% { transform: skewX(-22deg); }
+    to { transform: skewX(0); }
+}
+
+
+

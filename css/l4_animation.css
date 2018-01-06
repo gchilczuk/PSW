@@ -1,0 +1,72 @@
+@keyframes calc-anim {
+    0% {
+        left: 0px;
+    }
+    25% {
+        left: 50px;
+    }
+    50% {
+        left: 0px;
+    }
+    75% {
+        left: -50px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+#calc {
+    margin: auto;
+    display: block;
+    position: relative;
+    animation-name: calc-anim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/*CSS2 - zad9*/
+#cover {
+    position: relative;      
+    margin: 0 auto;         
+}
+
+#cover img.top {
+    position: absolute;
+    left: 0;          
+    -webkit-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+    z-index: 2;
+}
+
+#cover img.bottom {
+    position: absolute;
+    left: 0;        
+    z-index: 1;
+}
+
+#cover img.top:hover {
+    opacity: 0;
+}
+
+#cover2 {
+    position: absolute;
+    left: 200px;
+}
+
+img.rotated-and-scaled {    
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+}
+
+img.rotated-and-scaled:hover {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-transform: rotate(360deg) scale(1.5, 1.5);
+    -moz-transform: rotate(360deg) scale(1.5, 1.5);
+    -o-transform: rotate(360deg) scale(1.5, 1.5);
+    transform: rotate(360deg) scale(1.5, 1.5);
+}
