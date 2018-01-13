@@ -21,7 +21,7 @@
     <nav>
         <a href="Default.aspx">Start</a>
         <a href="">Przepisy</a>
-        <a href="">Przelicznik</a>
+        <a href="Sklep.aspx">Sklep</a>
         <a href="Onas.aspx">O nas</a>
         <a href="Register.aspx">Rejestracja</a>
     </nav>
