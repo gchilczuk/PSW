@@ -15,7 +15,6 @@ public partial class Sklep : System.Web.UI.Page
 
     Hashtable orders; // key to nazwa produktu; value to ilość produktów
     Hashtable prices; // key to nazwa produktu; value to cena produktu
-    Hashtable selected;
     String current;
 
 
@@ -42,8 +41,6 @@ public partial class Sklep : System.Web.UI.Page
         if (category_list.SelectedItem != null)
         {
             current = category_list.SelectedValue.ToString();
-            testlabel.Text = current;
-            testlabel.Visible = true;
             
             foreach (DictionaryEntry pair in chbLists)
             {
@@ -61,14 +58,6 @@ public partial class Sklep : System.Web.UI.Page
             buy_button.Visible = false;
         }
     }
-
-    protected void clear_Click(object sender, EventArgs e)
-    {
-        Session["orders"] = new Hashtable();
-        orders = (Hashtable)Session["orders"];
-        number_of_products.Text = countProducts().ToString();
-    }
-
 
     private void prepareProducts()
     {
@@ -94,8 +83,6 @@ public partial class Sklep : System.Web.UI.Page
         chbLists.Add("fruits", fruits_list);
         chbLists.Add("wegetables", wegetables_list);
         chbLists.Add("others", others_list);
-
-        selected = new Hashtable();
 
     }
 
@@ -154,9 +141,14 @@ public partial class Sklep : System.Web.UI.Page
                 number_of_products.Text = countProducts().ToString();
             }
         }
+    }
 
-        lista.DataSource = selected;
-        lista.DataBind();
-        lista.Visible = true;
+    protected void clear_Click(object sender, EventArgs e)
+    {
+        Session["orders"] = new Hashtable();
+        Session["prices"] = new Hashtable();
+        orders = (Hashtable)Session["orders"];
+        prices = (Hashtable)Session["prices"];
+        number_of_products.Text = countProducts().ToString();
     }
 }

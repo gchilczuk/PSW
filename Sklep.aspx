@@ -55,7 +55,7 @@
 
             <p><asp:Button ID="buy_button" Text="Dodaj zaznaczone do koszyka" runat="server" OnClick="Buy_button_Click" /></p>
 
-            <p><asp:CheckBoxList ID="lista" runat="server" ></asp:CheckBoxList></p>
+            
             <p><asp:HyperLink ID="link" runat="server" Text="Przejdź do podsumowania" NavigateUrl="Summary.aspx"></asp:HyperLink></p>
 
             <p><asp:Button ID="clear" Text="Wyczyść koszyk" runat="server" OnClick="clear_Click" AutoPostBack = "true" /></p>
