@@ -38,7 +38,7 @@
             <section id="1">
             <asp:RadioButtonList ID="category_list" runat="server"  AutoPostBack="True"> </asp:RadioButtonList>
       
-            <p>Liczba produktów w koszyku:<asp:Label ID="number_of_products" runat="server"></asp:Label></p>
+            <p>Liczba produktów w koszyku: <asp:Label ID="number_of_products" runat="server"></asp:Label></p>
             
             <p>
                 <asp:CheckBoxList ID="fruits_list" runat="server" ></asp:CheckBoxList>    

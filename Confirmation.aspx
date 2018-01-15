@@ -1,12 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Summary.aspx.cs" Inherits="Summary" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Confirmation.aspx.cs" Inherits="Confirmation" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Serwis kulinarny</title>
+    <title>Potwierdzenie zamówienia</title>
     <link rel="stylesheet" type="text/css" href="css/text_styles.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/background.css">
@@ -27,36 +26,17 @@
         <a href="Register.aspx">Rejestracja</a>
     </nav>
     <form id="form1" runat="server">
-        <div>
-          <p><asp:ListBox ID="order" runat="server" Width="270px" Height="100px" ></asp:ListBox>
-              <br />
-              <asp:Button ID="addOrder" runat="server" Text="Dodaj produkt" OnClick="addItem_Click" />
-              <asp:Button ID="clearItem" runat="server" Text="Usuń produkt" OnClick="clearItem_Click" />
-              <br />
-              <asp:Button ID="clearButton" runat="server" Text="Wyczyść koszyk" OnClick="clearButton_Click" />
-          </p>
-            <p>Łączna cena produktów:
-                <asp:Label ID="productsPriceLabel" runat="server"></asp:Label>         
-          </p>            
+        <div>   
             <p>
-                Forma dostawy
+                Dziękujemy za złożenie zamówienia w naszym sklepie!
                 <br />
-
-                <asp:RadioButtonList ID="receiptRbList" runat="server" AutoPostBack="True">
-                </asp:RadioButtonList>
-
-            </p>
-            <p>
-                Łączna wartość całego zamówienia:
+                Opłata za nie wyniosła 
                 <asp:Label ID="orderPriceLabel" runat="server"></asp:Label>
-            </p>
-            <p>
-                <asp:Button ID="orderButton" runat="server" Text="Zamawiam!" PostBackUrl="~/Confirmation.aspx" />
-            </p>
+                złotych.</p>
             <p>
                 <asp:HyperLink ID="productListHyperLink" runat="server" NavigateUrl="~/Sklep.aspx">Powrót do listy produktów</asp:HyperLink>
-            </p>
-          
+&nbsp;</p>       
+            
         </div>
     </form>
     <footer>

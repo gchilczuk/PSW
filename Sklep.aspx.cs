@@ -9,16 +9,13 @@ using System.Web.UI.WebControls;
 
 public partial class Sklep : System.Web.UI.Page
 {
-
     Hashtable products;
     Hashtable chbLists;
 
     Hashtable orders; // key to nazwa produktu; value to ilość produktów
     Hashtable prices; // key to nazwa produktu; value to cena produktu
-    String current;
-
-
-
+    String current; 
+    
     protected void Page_Load(object sender, EventArgs e)
     {
         prepareProducts();
@@ -58,7 +55,7 @@ public partial class Sklep : System.Web.UI.Page
             buy_button.Visible = false;
         }
     }
-
+        
     private void prepareProducts()
     {
         products = new Hashtable();
@@ -66,7 +63,7 @@ public partial class Sklep : System.Web.UI.Page
         Hashtable fruits = new Hashtable();
         Hashtable wegetables = new Hashtable();
         Hashtable others = new Hashtable();
-
+                
         fruits.Add("banan", 2);
         fruits.Add("kiwi", 5);
 
@@ -98,7 +95,9 @@ public partial class Sklep : System.Web.UI.Page
     {
         int n = 0;
         foreach (DictionaryEntry pair in orders)
-            { n += (int)pair.Value; }
+        {
+           n += (int)pair.Value;
+        }
         return n;
     }
 
@@ -116,7 +115,7 @@ public partial class Sklep : System.Web.UI.Page
         foreach (ListItem item in chb_list.Items)
         {
             String key = item.Value;
-            item.Text = key + " " + htable[key];
+            item.Text = key + " " + htable[key] + " zł";
             item.Value = key;
         }
     }
